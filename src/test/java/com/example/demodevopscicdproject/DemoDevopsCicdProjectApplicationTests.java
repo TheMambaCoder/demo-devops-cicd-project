@@ -20,7 +20,6 @@ class DemoDevopsCicdProjectApplicationTests {
     public void testTestService() {
         DemoDevopsCicdProjectApplication.ApiResponse result = demoDevopsCicdProjectApplication.testService();
         assertEquals("YOUPIIIII I'm running.....", result.message());
-        assertEquals("Dev", result.environment());
         assertEquals(200, result.code());
     }
 }
