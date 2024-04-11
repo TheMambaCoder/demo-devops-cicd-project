@@ -9,16 +9,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @SpringBootTest
 class DemoDevopsCicdProjectApplicationTests {
 
-	@Autowired
-	private DemoDevopsCicdProjectApplication demoDevopsCicdProjectApplication;
+    @Autowired
+    private DemoDevopsCicdProjectApplication demoDevopsCicdProjectApplication;
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
-	@Test
-	public void testTestService() {
-		String result = demoDevopsCicdProjectApplication.testService();
-		assertEquals("YOUPIIII I'm running.....", result);
-	}
+    @Test
+    public void testTestService() {
+        DemoDevopsCicdProjectApplication.ApiResponse result = demoDevopsCicdProjectApplication.testService();
+        assertEquals("YOUPIIII I'm running.....", result);
+    }
 }
