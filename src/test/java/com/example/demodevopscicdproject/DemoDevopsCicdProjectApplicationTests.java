@@ -19,6 +19,8 @@ class DemoDevopsCicdProjectApplicationTests {
     @Test
     public void testTestService() {
         DemoDevopsCicdProjectApplication.ApiResponse result = demoDevopsCicdProjectApplication.testService();
-        assertEquals("YOUPIIII I'm running.....", result);
+        assertEquals("YOUPIIIII I'm running.....", result.message());
+        assertEquals("Prod", result.environment());
+        assertEquals(200, result.code());
     }
 }
